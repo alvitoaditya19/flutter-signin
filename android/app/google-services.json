@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "240255412167",
+    "project_id": "pert9-try",
+    "storage_bucket": "pert9-try.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:240255412167:android:db3a98274032511bbddbe2",
+        "android_client_info": {
+          "package_name": "com.example.pert9crud"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "240255412167-ldah5euv4s9gce6beke37oecbv8l5o7v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLdggEHjtSDYybh17xN3UOda7s4vU5KLM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "240255412167-ldah5euv4s9gce6beke37oecbv8l5o7v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
