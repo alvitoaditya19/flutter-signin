@@ -13,8 +13,7 @@ class SignUpScreen extends StatefulWidget {
 }
 
 class _SignUpScreenState extends State<SignUpScreen> {
-  final TextEditingController _passwordTextController = TextEditingController();
-  final TextEditingController _emailTextController = TextEditingController();
+
 
   @override
   Widget build(BuildContext context) {
@@ -57,7 +56,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 CustomTextFormField(
                   label: "Email Address",
                   keyboardType: TextInputType.emailAddress,
-                  controller: _emailTextController,
+               
                 ),
                 const SizedBox(
                   height: 16,
@@ -73,7 +72,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 // ),
                 CustomTextFormField(
                   label: "Password",
-                  controller: _passwordTextController,
+              
                   isObscure: true,
                 ),
                 const SizedBox(
@@ -102,21 +101,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 CustomFilledButton(
                     title: "Sign Up",
                     onPressed: () {
-                      FirebaseAuth.instance
-                          .createUserWithEmailAndPassword(
-                              // email: "alvitoadty@gmail.com",
-                              // password: "12345678"
-                              email: _emailTextController.text,
-                              password: _passwordTextController.text)
-                          .then((value) {
-                        print("Created New Account");
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => HomeScreen()));
-                      }).onError((error, stackTrace) {
-                        print("Error ${error.toString()}");
-                      });
+            
                     }),
               ],
             ),

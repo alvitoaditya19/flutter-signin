@@ -14,9 +14,7 @@ class SignInScreen extends StatefulWidget {
 }
 
 class _SignInScreenState extends State<SignInScreen> {
-    final TextEditingController emailController = TextEditingController(text: '');
-  final TextEditingController passwordController =
-      TextEditingController(text: '');
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,7 +56,7 @@ class _SignInScreenState extends State<SignInScreen> {
                  CustomTextFormField(
                   label: "Email Address",
                   keyboardType: TextInputType.emailAddress,
-                      controller: emailController,
+                
 
                 ),
                 const SizedBox(
@@ -67,7 +65,7 @@ class _SignInScreenState extends State<SignInScreen> {
                  CustomTextFormField(
                   label: "Password",
                   isObscure: true,
-                      controller: passwordController,
+                 
 
                 ),
                 const SizedBox(
@@ -96,18 +94,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 CustomFilledButton(
                   title: "Sign In",
                   onPressed: () {
-                    FirebaseAuth.instance
-                        .signInWithEmailAndPassword(
-                            email: emailController.text,
-                            password: passwordController.text)
-                        .then((value) {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => HomeScreen()));
-                    }).onError((error, stackTrace) {
-                      print("Error ${error.toString()}");
-                    });
+                
                   },
                 ),
               ],
